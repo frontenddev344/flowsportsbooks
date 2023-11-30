@@ -190,6 +190,9 @@
   section.homebanner {
     padding: 96px 0 0 0;
   }
+  .link__contents {
+    padding: 20px 0;
+  }
 }
 @media screen and (max-width: 575px) {
   .site-nav {

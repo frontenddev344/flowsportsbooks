@@ -536,7 +536,7 @@ section.choose-main {
   transition: all 0.3s;
   height: 350px;
   object-fit: cover;
-  max-width: 500px;
+  max-width: 100%;
 }
 .linked__picture img:hover {
   transform: translateY(-10px);
@@ -554,7 +554,7 @@ section.choose-main {
   color: #010265;
   font-size: 20px;
   font-weight: 500;
-  max-width: 70%;
+  max-width: 100%;
 }
 .link__content p {
   line-height: 23px;
@@ -573,7 +573,7 @@ section.choose-main {
   color: #010265;
   font-size: 20px;
   font-weight: 500;
-  max-width: 70%;
+  max-width: 100%;
 }
 .link__contents p {
   text-align: justify;
