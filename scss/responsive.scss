@@ -230,9 +230,16 @@
 }
 
 @media screen and (max-width:767px) {
+    .hotelcard {
+        padding: 0;
+    }
 
     .homebanner-picture img {
         max-width: 100%;
+    }
+
+    section.homebanner {
+        padding: 96px 0 0 0;
     }
 }
 
