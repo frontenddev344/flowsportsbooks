@@ -1,0 +1,44 @@
+@import './variables';
+@import './mixins';
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+
+li {
+    list-style: none;
+}
+
+a,
+button {
+    font-family: 'Barlow', sans-serif;
+}
+
+p {
+    font-size: 17px;
+    font-weight: 400;
+    color: $clr-black;
+    font-family: 'Barlow', sans-serif;
+
+    @media screen and (max-width:991px) {
+        font-size: 16px;
+    }
+}
+
+h1 {
+    color: $clr-purple;
+    font-size: 40px;
+    font-weight: 700;
+
+    @media screen and (max-width:991px) {
+        font-size: 30px;
+    }
+}
+
+h2 {
+    font-size: 50px;
+    text-align: center;
+    color: $clr-black;
+    text-transform: capitalize;
+
+    @media screen and (max-width:991px) {
+        font-size: 30px;
+    }
+}

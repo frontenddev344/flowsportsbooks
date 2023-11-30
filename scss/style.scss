@@ -1,0 +1,691 @@
+/*global start*/
+@import 'mixins';
+@import 'variables';
+@import 'typography';
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-size: 1.6rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.btn a {
+    color: $clr-white;
+    font-size: 18px;
+    border: 1px solid $clr-yellow;
+    padding: 10px 19px;
+    background-color: $clr-yellow;
+    display: block;
+
+    &:hover {
+        background-color: $clr-purple;
+        border: 1px solid $clr-purple;
+        color: $clr-white;
+    }
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:focus {
+    color: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/*global end*/
+
+/*header start*/
+header.site-header {
+    background: #ffffff;
+    font-size: 18px;
+    padding: 14px 0;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: #000000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    width: 100%;
+    transition: .3s;
+}
+
+header.site-header.sticky {
+    background: #ffffff;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.3);
+    animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+    padding: 10px 0;
+    position: fixed;
+}
+
+.site-header .site-nav ul li a.active {
+    color: $clr-yellow;
+}
+
+.site-logo img {
+    width: 100%;
+    max-width: 300px;
+}
+
+.site-nav a {
+    padding: 8px 12px !important;
+    display: inline-block;
+    color: $clr-purple;
+    font-weight: 500;
+
+    &:hover {
+        color: $clr-yellow;
+    }
+}
+
+
+.site-header {
+    padding: 10px 0;
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-nav ul {
+    display: flex;
+    align-items: center;
+}
+
+.closed-menu {
+    display: none;
+}
+
+.menu-toggle {
+    display: none !important;
+}
+
+/*header end*/
+
+/*footer-css-start*/
+.footer {
+    padding: 150px 0;
+    background-color: $clr-yellow;
+
+    &-links {
+        text-align: center;
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+    }
+
+    &-logo {
+        max-width: 300px;
+        margin: 0 auto 20px;
+    }
+
+    &-links {
+        h2 {
+            color: $clr-white;
+        }
+
+        a {
+            color: $clr-purple;
+
+            &:hover {
+                color: $clr-white;
+            }
+        }
+    }
+
+    &-adresse {
+        h2 {
+            color: $clr-white;
+        }
+
+        p {
+            color: $clr-white;
+        }
+    }
+
+    &-mails {
+        a {
+            color: $clr-white;
+        }
+    }
+
+    &-mails {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.mails-names {
+    gap: 16px;
+    display: flex;
+    align-items: end;
+}
+
+.social-signals {
+    margin-top: 25px;
+    text-align: center;
+
+    i {
+        color: $clr-purple;
+        border-radius: 30px;
+        font-size: 18px;
+        margin: 0 10px;
+        border: 1px solid $clr-purple;
+        height: 40px;
+        width: 40px;
+        text-align: center;
+        line-height: 36px;
+        transition: .3s all;
+
+        &:hover {
+            color: $clr-white;
+            transform: translateY(-10px);
+        }
+    }
+}
+
+.footer_bottom {
+    border-top: 1px solid #fff;
+    padding: 10px;
+    margin: 30px 0;
+
+    p {
+
+        text-align: center;
+
+        a {
+            color: #fff;
+
+            &:hover {
+                color: $clr-yellow;
+            }
+        }
+    }
+}
+
+
+/*footer-css-end*/
+
+
+/*banner-css-start*/
+section.homebanner {
+    position: relative;
+    padding: 150px 0 0 0;
+    background-image: url(../images/homebannerback.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.homebanner-text {
+    h1 {
+        color: $clr-purple;
+
+    }
+
+    p span {
+        font-weight: 500;
+        color: $clr-yellow;
+        font-size: 22px;
+    }
+}
+
+.homebanner-picture img {
+    max-width: 450px;
+}
+
+.pulsating-circle {
+    position: absolute;
+    left: 80%;
+    top: 30%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 30px;
+    height: 30px;
+
+    &:before {
+        content: '';
+        position: relative;
+        display: block;
+        width: 300%;
+        height: 300%;
+        box-sizing: border-box;
+        margin-left: -100%;
+        margin-top: -100%;
+        border-radius: 45px;
+        background-color: $clr-yellow;
+        animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 0 8px rgba(0, 0, 0, .3);
+        animation: pulse-dot 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -.4s infinite;
+    }
+}
+
+@keyframes pulse-ring {
+    0% {
+        transform: scale(.33);
+    }
+
+    80%,
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes pulse-dot {
+    0% {
+        transform: scale(.8);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(.8);
+    }
+}
+
+/*banner-css-end*/
+
+/*sportsbooksection-css-start*/
+.sportsbooksection {
+    padding: 50px 0;
+}
+
+.sportsbook-flex {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.sportsbook-part img {
+    max-width: 230px;
+    height: 230px;
+    object-fit: cover;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+}
+
+/*sportsbooksection-css-end*/
+
+/*choose-css-start*/
+.choose {
+    &-head {
+        padding: 50px 0;
+    }
+}
+
+.row.gap {
+    row-gap: 15px;
+}
+
+section.choose-main {
+    padding: 0 0 60px 0;
+}
+
+.item {
+    padding: 40px 20px;
+    transition: 0.5s;
+    position: relative;
+    border: 3px solid $clr-yellow;
+    z-index: 1;
+    margin-bottom: 30px;
+    line-height: 1;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+
+    img {
+        max-width: 64px;
+        transition: .3s;
+    }
+
+    h5 {
+        font-size: 24px;
+        color: $clr-purple;
+        margin: 10px 0;
+
+        &:hover {
+            color: $clr-black;
+            -webkit-transition: .5s;
+            transition: .5s;
+        }
+    }
+
+    p {
+        margin: 0 auto;
+        color: $clr-black;
+        max-width: 60%;
+        line-height: 25px;
+    }
+}
+
+.item span {
+    font-size: 45px;
+    color: $clr-black;
+    line-height: 1;
+    margin-bottom: 10px;
+    display: inline-block;
+    -webkit-transition: .5s;
+    transition: .5s;
+}
+
+.item:hover span {
+    color: $clr-black;
+}
+
+.item .shape {
+    position: absolute;
+    opacity: 0.03;
+    z-index: -1;
+    bottom: 15px;
+    left: 120px;
+}
+
+.item .shape span {
+    font-size: 140px;
+    color: $clr-black;
+}
+
+.item:hover img {
+    transform: rotateY(180deg);
+}
+
+/*choose-css-end*/
+
+/*sportsbookscanada-css-start*/
+
+.homemain__part.casino p {
+    margin: 0;
+}
+
+.hotelcard {
+    padding: 50px 0 0 0;
+
+    p {
+        color: $clr-black;
+        font-size: 16px;
+        line-height: 25px;
+        margin: 10px 0;
+    }
+
+    &__picture {
+        img {
+            max-width: 450px;
+            height: 450px;
+            object-fit: cover;
+        }
+    }
+
+    &__part {
+        max-width: 75%;
+        padding: 30px 0;
+
+        h3 {
+            font-size: 17px;
+            line-height: 28px;
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background-color: $clr-purple;
+                height: 1px;
+                width: 293px;
+            }
+        }
+
+        h4 {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+    }
+
+}
+
+.hotel-btn a {
+    display: inline-block;
+    background: $clr-purple;
+    color: $clr-white;
+    font-size: 18px;
+    text-align: center;
+    padding: 13px 30px;
+    border: 1px solid $clr-purple;
+
+    &:hover {
+        border: 1px solid $clr-purple;
+        background-color: transparent;
+        color: $clr-purple;
+    }
+}
+
+.hotel__numeric {
+    font-size: 30px;
+}
+
+.homecard__text.hotel {
+    padding-bottom: 30px;
+}
+
+.end__content.hotely {
+    h3 {
+        margin: 0 0 20px;
+    }
+
+    p {
+        margin-top: 0;
+    }
+}
+
+.end__content.hotely {
+    padding: 30px 0;
+}
+
+.endtext {
+    padding: 30px 0;
+}
+
+/*hotels-css-end*/
+/*sportsbookscanada-css-start*/
+
+
+/*contactbanner-css-start*/
+.contact__section {
+    padding: 50px 0;
+}
+
+section.contactbanner {
+    background-image: url(../images/contactbanner.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.55);
+        height: 450px;
+    }
+}
+
+.contact__text {
+    p {
+        color: $clr-purple;
+    }
+}
+
+.contact__para {
+    h3 {
+        color: $clr-yellow;
+        font-size: 25px;
+        color: $clr-yellow;
+    }
+
+    p {
+        color: $clr-purple;
+    }
+}
+
+.social-media {
+    i {
+        color: $clr-purple;
+        border-radius: 30px;
+        font-size: 18px;
+        margin: 0 10px;
+        border: 1px solid $clr-purple;
+        height: 40px;
+        width: 40px;
+        text-align: center;
+        line-height: 36px;
+        transition: 0.3s all;
+    }
+
+    h3 {
+        color: $clr-purple;
+        font-size: 18px;
+        font-family: 'Barlow';
+    }
+
+}
+
+/*contactbanner-css-end*/
+
+/*privacy-css-end*/
+section.privacybanner {
+    background-image: url(../images/privacybanner.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.55);
+        height: 450px;
+    }
+}
+
+.privacybanner-text h1 {
+    position: absolute;
+    top: 50%;
+    color: $clr-yellow;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    font-size: 50px;
+}
+
+.content-wrap {
+    h3 {
+        font-size: 25px;
+        color: $clr-yellow;
+    }
+
+    p {
+        font-size: 16px;
+        font-weight: 400;
+        color: $clr-purple;
+    }
+
+    li {
+        font-family: 'barlow';
+        color: $clr-purple;
+    }
+}
+
+.privacy-policy {
+    padding: 50px 0;
+    background-color: $clr-white;
+    position: relative;
+}
+
+.bodybg img {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    opacity: 0.1;
+    filter: drop-shadow(black 2px 4px 6px);
+    max-width: 750px;
+}
+
+/*privacy-css-end*/
+
+/*terms-css-start*/
+section.termsbanner {
+    background-image: url(../images/termsbanner.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.55);
+        height: 450px;
+    }
+}
+
+/*terms-css-end*/
+
+
+/*# sourceMappingURL=style.css.map */

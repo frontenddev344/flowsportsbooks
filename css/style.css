@@ -1,0 +1,647 @@
+/*global start*/
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap");
+li {
+  list-style: none;
+}
+
+a,
+button {
+  font-family: "Barlow", sans-serif;
+}
+
+p {
+  font-size: 17px;
+  font-weight: 400;
+  color: #0C0B0B;
+  font-family: "Barlow", sans-serif;
+}
+@media screen and (max-width: 991px) {
+  p {
+    font-size: 16px;
+  }
+}
+
+h1 {
+  color: #010265;
+  font-size: 40px;
+  font-weight: 700;
+}
+@media screen and (max-width: 991px) {
+  h1 {
+    font-size: 30px;
+  }
+}
+
+h2 {
+  font-size: 50px;
+  text-align: center;
+  color: #0C0B0B;
+  text-transform: capitalize;
+}
+@media screen and (max-width: 991px) {
+  h2 {
+    font-size: 30px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-size: 1.6rem;
+  font-family: "Playfair Display", serif;
+}
+
+.btn a {
+  color: #fff;
+  font-size: 18px;
+  border: 1px solid #ffd523;
+  padding: 10px 19px;
+  background-color: #ffd523;
+  display: block;
+}
+.btn a:hover {
+  background-color: #010265;
+  border: 1px solid #010265;
+  color: #fff;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:focus {
+  color: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/*global end*/
+/*header start*/
+header.site-header {
+  background: #ffffff;
+  font-size: 18px;
+  padding: 14px 0;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: #000000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  width: 100%;
+  transition: 0.3s;
+}
+
+header.site-header.sticky {
+  background: #ffffff;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.3);
+  animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+  padding: 10px 0;
+  position: fixed;
+}
+
+.site-header .site-nav ul li a.active {
+  color: #ffd523;
+}
+
+.site-logo img {
+  width: 100%;
+  max-width: 300px;
+}
+
+.site-nav a {
+  padding: 8px 12px !important;
+  display: inline-block;
+  color: #010265;
+  font-weight: 500;
+}
+.site-nav a:hover {
+  color: #ffd523;
+}
+
+.site-header {
+  padding: 10px 0;
+}
+
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-nav ul {
+  display: flex;
+  align-items: center;
+}
+
+.closed-menu {
+  display: none;
+}
+
+.menu-toggle {
+  display: none !important;
+}
+
+/*header end*/
+/*footer-css-start*/
+.footer {
+  padding: 150px 0;
+  background-color: #ffd523;
+}
+.footer-links {
+  text-align: center;
+}
+.footer-links ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+.footer-logo {
+  max-width: 300px;
+  margin: 0 auto 20px;
+}
+.footer-links h2 {
+  color: #fff;
+}
+.footer-links a {
+  color: #010265;
+}
+.footer-links a:hover {
+  color: #fff;
+}
+.footer-adresse h2 {
+  color: #fff;
+}
+.footer-adresse p {
+  color: #fff;
+}
+.footer-mails a {
+  color: #fff;
+}
+.footer-mails {
+  display: flex;
+  flex-direction: column;
+}
+
+.mails-names {
+  gap: 16px;
+  display: flex;
+  align-items: end;
+}
+
+.social-signals {
+  margin-top: 25px;
+  text-align: center;
+}
+.social-signals i {
+  color: #010265;
+  border-radius: 30px;
+  font-size: 18px;
+  margin: 0 10px;
+  border: 1px solid #010265;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 36px;
+  transition: 0.3s all;
+}
+.social-signals i:hover {
+  color: #fff;
+  transform: translateY(-10px);
+}
+
+.footer_bottom {
+  border-top: 1px solid #fff;
+  padding: 10px;
+  margin: 30px 0;
+}
+.footer_bottom p {
+  text-align: center;
+}
+.footer_bottom p a {
+  color: #fff;
+}
+.footer_bottom p a:hover {
+  color: #ffd523;
+}
+
+/*footer-css-end*/
+/*banner-css-start*/
+section.homebanner {
+  position: relative;
+  padding: 150px 0 0 0;
+  background-image: url(../images/homebannerback.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.homebanner-text h1 {
+  color: #010265;
+}
+.homebanner-text p span {
+  font-weight: 500;
+  color: #ffd523;
+  font-size: 22px;
+}
+
+.homebanner-picture img {
+  max-width: 450px;
+}
+
+.pulsating-circle {
+  position: absolute;
+  left: 80%;
+  top: 30%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 30px;
+  height: 30px;
+}
+.pulsating-circle:before {
+  content: "";
+  position: relative;
+  display: block;
+  width: 300%;
+  height: 300%;
+  box-sizing: border-box;
+  margin-left: -100%;
+  margin-top: -100%;
+  border-radius: 45px;
+  background-color: #ffd523;
+  animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+.pulsating-circle:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  animation: pulse-dot 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s infinite;
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.33);
+  }
+  80%, 100% {
+    opacity: 0;
+  }
+}
+@keyframes pulse-dot {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
+/*banner-css-end*/
+/*sportsbooksection-css-start*/
+.sportsbooksection {
+  padding: 50px 0;
+}
+
+.sportsbook-flex {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.sportsbook-part img {
+  max-width: 230px;
+  height: 230px;
+  object-fit: cover;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+}
+
+/*sportsbooksection-css-end*/
+/*choose-css-start*/
+.choose-head {
+  padding: 50px 0;
+}
+
+.row.gap {
+  row-gap: 15px;
+}
+
+section.choose-main {
+  padding: 0 0 60px 0;
+}
+
+.item {
+  padding: 40px 20px;
+  transition: 0.5s;
+  position: relative;
+  border: 3px solid #ffd523;
+  z-index: 1;
+  margin-bottom: 30px;
+  line-height: 1;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+.item img {
+  max-width: 64px;
+  transition: 0.3s;
+}
+.item h5 {
+  font-size: 24px;
+  color: #010265;
+  margin: 10px 0;
+}
+.item h5:hover {
+  color: #0C0B0B;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.item p {
+  margin: 0 auto;
+  color: #0C0B0B;
+  max-width: 60%;
+  line-height: 25px;
+}
+
+.item span {
+  font-size: 45px;
+  color: #0C0B0B;
+  line-height: 1;
+  margin-bottom: 10px;
+  display: inline-block;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.item:hover span {
+  color: #0C0B0B;
+}
+
+.item .shape {
+  position: absolute;
+  opacity: 0.03;
+  z-index: -1;
+  bottom: 15px;
+  left: 120px;
+}
+
+.item .shape span {
+  font-size: 140px;
+  color: #0C0B0B;
+}
+
+.item:hover img {
+  transform: rotateY(180deg);
+}
+
+/*choose-css-end*/
+/*sportsbookscanada-css-start*/
+.homemain__part.casino p {
+  margin: 0;
+}
+
+.hotelcard {
+  padding: 50px 0 0 0;
+}
+.hotelcard p {
+  color: #0C0B0B;
+  font-size: 16px;
+  line-height: 25px;
+  margin: 10px 0;
+}
+.hotelcard__picture img {
+  max-width: 450px;
+  height: 450px;
+  object-fit: cover;
+}
+.hotelcard__part {
+  max-width: 75%;
+  padding: 30px 0;
+}
+.hotelcard__part h3 {
+  font-size: 17px;
+  line-height: 28px;
+  position: relative;
+}
+.hotelcard__part h3::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #010265;
+  height: 1px;
+  width: 293px;
+}
+.hotelcard__part h4 {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.hotel-btn a {
+  display: inline-block;
+  background: #010265;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  padding: 13px 30px;
+  border: 1px solid #010265;
+}
+.hotel-btn a:hover {
+  border: 1px solid #010265;
+  background-color: transparent;
+  color: #010265;
+}
+
+.hotel__numeric {
+  font-size: 30px;
+}
+
+.homecard__text.hotel {
+  padding-bottom: 30px;
+}
+
+.end__content.hotely h3 {
+  margin: 0 0 20px;
+}
+.end__content.hotely p {
+  margin-top: 0;
+}
+
+.end__content.hotely {
+  padding: 30px 0;
+}
+
+.endtext {
+  padding: 30px 0;
+}
+
+/*hotels-css-end*/
+/*sportsbookscanada-css-start*/
+/*contactbanner-css-start*/
+.contact__section {
+  padding: 50px 0;
+}
+
+section.contactbanner {
+  background-image: url(../images/contactbanner.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 450px;
+  position: relative;
+}
+section.contactbanner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+  height: 450px;
+}
+
+.contact__text p {
+  color: #010265;
+}
+
+.contact__para h3 {
+  color: #ffd523;
+  font-size: 25px;
+  color: #ffd523;
+}
+.contact__para p {
+  color: #010265;
+}
+
+.social-media i {
+  color: #010265;
+  border-radius: 30px;
+  font-size: 18px;
+  margin: 0 10px;
+  border: 1px solid #010265;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 36px;
+  transition: 0.3s all;
+}
+.social-media h3 {
+  color: #010265;
+  font-size: 18px;
+  font-family: "Barlow";
+}
+
+/*contactbanner-css-end*/
+/*privacy-css-end*/
+section.privacybanner {
+  background-image: url(../images/privacybanner.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 450px;
+  position: relative;
+}
+section.privacybanner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+  height: 450px;
+}
+
+.privacybanner-text h1 {
+  position: absolute;
+  top: 50%;
+  color: #ffd523;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  font-size: 50px;
+}
+
+.content-wrap h3 {
+  font-size: 25px;
+  color: #ffd523;
+}
+.content-wrap p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #010265;
+}
+.content-wrap li {
+  font-family: "barlow";
+  color: #010265;
+}
+
+.privacy-policy {
+  padding: 50px 0;
+  background-color: #fff;
+  position: relative;
+}
+
+.bodybg img {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  opacity: 0.1;
+  filter: drop-shadow(black 2px 4px 6px);
+  max-width: 750px;
+}
+
+/*privacy-css-end*/
+/*terms-css-start*/
+section.termsbanner {
+  background-image: url(../images/termsbanner.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 450px;
+  position: relative;
+}
+section.termsbanner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+  height: 450px;
+}
+
+/*terms-css-end*/
+
+
+/*# sourceMappingURL=style.css.map */
