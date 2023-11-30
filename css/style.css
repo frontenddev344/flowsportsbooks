@@ -173,7 +173,7 @@ header.site-header.sticky {
 /*footer-css-start*/
 .footer {
   padding: 150px 0;
-  background-color: #ffd523;
+  background-color: #010265;
 }
 .footer-links {
   text-align: center;
@@ -192,10 +192,10 @@ header.site-header.sticky {
   color: #fff;
 }
 .footer-links a {
-  color: #010265;
+  color: #fff;
 }
 .footer-links a:hover {
-  color: #fff;
+  color: #ffd523;
 }
 .footer-adresse h2 {
   color: #fff;
@@ -222,11 +222,11 @@ header.site-header.sticky {
   text-align: center;
 }
 .social-signals i {
-  color: #010265;
+  color: #fff;
   border-radius: 30px;
   font-size: 18px;
   margin: 0 10px;
-  border: 1px solid #010265;
+  border: 1px solid #fff;
   height: 40px;
   width: 40px;
   text-align: center;
@@ -234,7 +234,7 @@ header.site-header.sticky {
   transition: 0.3s all;
 }
 .social-signals i:hover {
-  color: #fff;
+  color: #ffd523;
   transform: translateY(-10px);
 }
 
