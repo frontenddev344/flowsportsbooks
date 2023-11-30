@@ -513,7 +513,105 @@ section.choose-main {
 }
 
 /*hotels-css-end*/
-/*sportsbookscanada-css-start*/
+/*Books-css-start*/
+.linked__section {
+  padding: 50px 0;
+}
+
+.link__main {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  height: 100%;
+  transition: all 0.3s;
+}
+.link__main:hover {
+  transform: translateY(-10px);
+}
+
+.link__card {
+  height: 100%;
+}
+
+.linked__picture img {
+  width: 100%;
+  transition: all 0.3s;
+  height: 350px;
+  object-fit: cover;
+  max-width: 500px;
+}
+.linked__picture img:hover {
+  transform: translateY(-10px);
+}
+
+.link__content {
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  text-align: justify;
+}
+.link__content h3 {
+  color: #010265;
+  font-size: 20px;
+  font-weight: 500;
+  max-width: 70%;
+}
+.link__content p {
+  line-height: 23px;
+  text-align: justify;
+}
+
+.link__contents {
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  text-align: justify;
+}
+.link__contents h3 {
+  color: #010265;
+  font-size: 20px;
+  font-weight: 500;
+  max-width: 70%;
+}
+.link__contents p {
+  text-align: justify;
+}
+
+p.disclaimer__text {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.casino-information.part p {
+  text-align: center;
+  padding: 20px 0;
+}
+
+a.btn-home {
+  background: #010265;
+  border: 2px solid #010265;
+  display: inline-block;
+  font-size: 18px;
+  text-transform: capitalize;
+  padding: 9px 23px;
+  color: #fff;
+}
+a.btn-home:hover {
+  background-color: transparent;
+  color: #ffd523;
+}
+
+.link__btn {
+  padding: 24px 0;
+}
+
+.casino-information.disclaimer {
+  padding: 40px 0;
+}
+
+/*Books-css-end*/
 /*contactbanner-css-start*/
 .contact__section {
   padding: 50px 0;
