@@ -263,10 +263,6 @@ header.site-header.sticky {
 section.homebanner {
   position: relative;
   padding: 150px 0 0 0;
-  background-image: url(../images/homebannerback.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 }
 
 .homebanner-text h1 {
