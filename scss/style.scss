@@ -269,10 +269,14 @@ section.homebanner {
 }
 
 .homebanner-picture img {
-    max-width: 350px;
+    max-width: 400px;
     min-height: 350px;
     object-fit: cover;
 
+}
+
+.homebanner-picture.size img {
+    max-width: 550px;
 }
 
 .pulsating-circle {
