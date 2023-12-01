@@ -252,10 +252,7 @@ header.site-header.sticky {
 section.homebanner {
     position: relative;
     padding: 150px 0 0 0;
-    // background-image: url(../images/homebannerback.png);
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    // background-position: center;
+    min-height: 450px;
 }
 
 .homebanner-text {
@@ -272,7 +269,10 @@ section.homebanner {
 }
 
 .homebanner-picture img {
-    max-width: 450px;
+    max-width: 350px;
+    min-height: 350px;
+    object-fit: cover;
+
 }
 
 .pulsating-circle {

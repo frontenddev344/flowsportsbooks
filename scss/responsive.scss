@@ -220,12 +220,22 @@
 }
 
 @media screen and (max-width:820px) {
-    .sportsbook-flex {
-        justify-content: space-evenly;
-    }
 
     .item p {
         max-width: 100%;
+    }
+
+    .sportsbook-flex {
+        justify-content: center;
+        gap: 36px;
+    }
+
+    .social-media h3 {
+        font-size: 16px;
+    }
+
+    .social-media {
+        flex-direction: column;
     }
 }
 
