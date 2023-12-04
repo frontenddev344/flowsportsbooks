@@ -457,11 +457,10 @@ section.homebanner {
     height: 55px;
     line-height: 55px;
     font-size: 20px;
-    border-radius: 5px;
     border: 1px solid $clr-purple;
 
     &:hover {
-        background-color: yellow;
+        background-color: $clr-yellow;
         color: $clr-purple;
         border: 1px solid $clr-yellow;
     }

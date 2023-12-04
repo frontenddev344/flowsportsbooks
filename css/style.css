@@ -456,11 +456,10 @@ section.homebanner {
   height: 55px;
   line-height: 55px;
   font-size: 20px;
-  border-radius: 5px;
   border: 1px solid #010265;
 }
 .resturent-button a:hover {
-  background-color: yellow;
+  background-color: #ffd523;
   color: #010265;
   border: 1px solid #ffd523;
 }
